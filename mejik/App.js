@@ -8,9 +8,16 @@
 
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
+import {createAppContainer} from 'react-navigation';
+import {View, Text} from 'react-native';
+
+//screens
+import BottomTabNavigator from './src/screens/BottomTabNavigator/index';
 
 const App = createStackNavigator({
-  BottomTabNavigator: {},
+  BottomTabNavigator: {
+    screen: BottomTabNavigator,
+  },
 });
 
-export default App;
+export default createAppContainer(App);
