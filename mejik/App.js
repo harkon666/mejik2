@@ -9,15 +9,21 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
-import {View, Text} from 'react-native';
 
 //screens
 import BottomTabNavigator from './src/screens/BottomTabNavigator/index';
+import LoginScreen from './src/screens/LoginScreen/index';
 
-const App = createStackNavigator({
-  BottomTabNavigator: {
-    screen: BottomTabNavigator,
+const App = createStackNavigator(
+  {
+    LoginScreen: {
+      screen: LoginScreen,
+    },
+    BottomTabNavigator: {
+      screen: BottomTabNavigator,
+    },
   },
-});
+  {headerMode: 'none'},
+);
 
 export default createAppContainer(App);

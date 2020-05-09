@@ -1,6 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
+//components
+import Footer from '../../components/BottomTabFooter';
+
 //screen
 import ArticleScreen from './article';
 import DonationScreen from './donation';
@@ -14,6 +17,9 @@ const Router = createBottomTabNavigator(
   },
   {
     swipeEnabled: true,
+    tabBarComponent: props => {
+      return <Footer {...props} />;
+    },
   },
   {
     initialRouteName: 'ArticleScreen',
