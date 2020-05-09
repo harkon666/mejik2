@@ -8,7 +8,6 @@ const BottomTabFooter = ({state, descriptors, navigation}) => {
     <View
       style={{
         height: 60,
-        flexWrap: 'wrap-reverse',
         flexDirection: 'row',
         backgroundColor: 'white',
       }}>
@@ -17,7 +16,7 @@ const BottomTabFooter = ({state, descriptors, navigation}) => {
           setActive(1);
           navigation.navigate('ArticleScreen');
         }}
-        style={{flex: 1, marginBottom: 100}}>
+        style={{flex: 1}}>
         <View style={{alignItems: 'center'}}>
           <Icon
             color={active === 1 ? 'red' : 'black'}
@@ -29,11 +28,36 @@ const BottomTabFooter = ({state, descriptors, navigation}) => {
         </View>
       </View>
       <View
-        onTouchStart={() => navigation.navigate('SignScreen')}
-        style={{flex: 1, marginBottom: 80, marginTop: 15}}>
-        <View style={{alignItems: 'center'}}>
-          <Icon name={'ribbon'} solid size={40} />
-          <Text>Donate</Text>
+        style={{
+          flex: 1,
+          bottom: 30,
+          paddingBottom: 30,
+        }}>
+        <View
+          style={{
+            alignItems: 'center',
+          }}>
+          <View
+            style={{
+              borderRadius: 100,
+              backgroundColor: 'red',
+              height: 60,
+              width: 60,
+              alignItems: 'center',
+            }}>
+            <Icon
+              onPress={() => {
+                setActive(2);
+                navigation.navigate('SignScreen');
+              }}
+              color="white"
+              style={{marginTop: 10}}
+              name={'ribbon'}
+              solid
+              size={35}
+            />
+          </View>
+          <Text style={{top: 2}}>Donate</Text>
         </View>
       </View>
       <View
@@ -41,7 +65,7 @@ const BottomTabFooter = ({state, descriptors, navigation}) => {
           setActive(3);
           navigation.navigate('SettingScreen');
         }}
-        style={{flex: 1, marginBottom: 100}}>
+        style={{flex: 1}}>
         <View style={{alignItems: 'center'}}>
           <Icon
             color={active === 3 ? 'red' : 'black'}

@@ -5,7 +5,6 @@ import {Header, Image, Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const SignScreen = ({navigation}) => {
-  console.log(navigation);
   return (
     <>
       <Header
@@ -43,7 +42,11 @@ const SignScreen = ({navigation}) => {
         </View>
         <View style={{marginTop: 50, marginHorizontal: 30}}>
           <View style={{marginBottom: 10}}>
-            <Button title="Login" buttonStyle={{backgroundColor: 'red'}} />
+            <Button
+              onPress={() => navigation.navigate('LoginScreen')}
+              title="Login"
+              buttonStyle={{backgroundColor: 'red'}}
+            />
           </View>
           <View>
             <Button
