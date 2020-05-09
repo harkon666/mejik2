@@ -3,7 +3,7 @@ import {View, Text, ScrollView} from 'react-native';
 import {Header, Image} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const ArticleScreen = () => {
+const ArticleScreen = ({navigation}) => {
   return (
     <>
       <Header

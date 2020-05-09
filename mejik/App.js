@@ -12,15 +12,15 @@ import {createAppContainer} from 'react-navigation';
 
 //screens
 import BottomTabNavigator from './src/screens/BottomTabNavigator/index';
-import LoginScreen from './src/screens/LoginScreen/index';
+import SignScreen from './src/screens/SignScreen/index';
 
 const App = createStackNavigator(
   {
-    LoginScreen: {
-      screen: LoginScreen,
-    },
     BottomTabNavigator: {
       screen: BottomTabNavigator,
+    },
+    SignScreen: {
+      screen: SignScreen,
     },
   },
   {headerMode: 'none'},

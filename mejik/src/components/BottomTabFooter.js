@@ -29,7 +29,7 @@ const BottomTabFooter = ({state, descriptors, navigation}) => {
         </View>
       </View>
       <View
-        onTouchStart={() => navigation.navigate('DonationScreen')}
+        onTouchStart={() => navigation.navigate('SignScreen')}
         style={{flex: 1, marginBottom: 80, marginTop: 15}}>
         <View style={{alignItems: 'center'}}>
           <Icon name={'ribbon'} solid size={40} />

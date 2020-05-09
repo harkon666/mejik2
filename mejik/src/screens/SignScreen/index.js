@@ -1,5 +1,18 @@
 import {createStackNavigator} from 'react-navigation-stack';
 
-const LoginScreen = createStackNavigator({});
+//screens
+import SignScreen from './sign';
+import LoginScreen from './LoginScreen/index';
 
-export default LoginScreen;
+const Router = createStackNavigator(
+  {
+    SignScreen: {
+      screen: SignScreen,
+    },
+  },
+  {
+    headerMode: 'none',
+  },
+);
+
+export default Router;
