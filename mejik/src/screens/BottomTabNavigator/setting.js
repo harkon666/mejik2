@@ -4,7 +4,7 @@ import {Image, Header, Button} from 'react-native-elements';
 
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const SettingScreen = () => {
+const SettingScreen = ({navigation}) => {
   return (
     <View>
       <Header
@@ -45,6 +45,7 @@ const SettingScreen = () => {
           backgroundColor: 'white',
         }}>
         <Button
+          onPress={() => navigation.navigate('HistoryScreen')}
           buttonStyle={{backgroundColor: 'white', marginTop: 5}}
           titleStyle={{color: 'black', marginRight: 'auto'}}
           icon={

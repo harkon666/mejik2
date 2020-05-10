@@ -48,7 +48,7 @@ const BottomTabFooter = ({state, descriptors, navigation}) => {
             <Icon
               onPress={() => {
                 setActive(2);
-                navigation.navigate('SignScreen');
+                navigation.navigate('TargetDonateScreen');
               }}
               color="white"
               style={{marginTop: 10}}

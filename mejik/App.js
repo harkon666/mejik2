@@ -6,13 +6,14 @@
  * @flow strict-local
  */
 
-import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 
 //screens
 import BottomTabNavigator from './src/screens/BottomTabNavigator/index';
 import SignScreen from './src/screens/SignScreen/index';
+import HistoryScreen from './src/screens/history';
+import TargetDonateScreen from './src/screens/DonationScreen';
 
 const App = createStackNavigator(
   {
@@ -21,6 +22,12 @@ const App = createStackNavigator(
     },
     SignScreen: {
       screen: SignScreen,
+    },
+    HistoryScreen: {
+      screen: HistoryScreen,
+    },
+    TargetDonateScreen: {
+      screen: TargetDonateScreen,
     },
   },
   {headerMode: 'none'},

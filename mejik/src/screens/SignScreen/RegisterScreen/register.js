@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-import {Header, Image, Input, Button} from 'react-native-elements';
+import {Header, Input, Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const RegisterScreen = ({navigation}) => {
