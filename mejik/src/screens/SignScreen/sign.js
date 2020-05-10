@@ -50,6 +50,7 @@ const SignScreen = ({navigation}) => {
           </View>
           <View>
             <Button
+              onPress={() => navigation.navigate('RegisterScreen')}
               type="outline"
               title="Register"
               buttonStyle={{borderColor: 'red'}}
